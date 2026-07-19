@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Huzaifa bin Ishaq — Résumé</title>
+    <style>
+      @page { size: Letter; margin: 0.3in 0.48in; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 9.2pt; line-height: 1.28; }
+      header { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; border-bottom: 2px solid #111827; padding-bottom: 9px; }
+      h1 { margin: 0; font-size: 26pt; line-height: 1; letter-spacing: -0.7px; }
+      .title { margin-top: 5px; color: #475569; font-size: 11pt; font-weight: 700; }
+      .contact { text-align: right; color: #334155; font-size: 8.5pt; line-height: 1.5; }
+      .contact a { color: inherit; text-decoration: none; }
+      .summary { margin: 8px 0 0; color: #334155; font-size: 9.4pt; }
+      section { margin-top: 9px; }
+      h2 { margin: 0 0 6px; color: #0f172a; font-size: 9pt; letter-spacing: 1.4px; text-transform: uppercase; border-bottom: 1px solid #cbd5e1; padding-bottom: 3px; }
+      .entry { margin-top: 5px; }
+      .entry:first-of-type { margin-top: 0; }
+      .entry-head { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; }
+      h3 { margin: 0; font-size: 10.4pt; }
+      .meta { color: #475569; font-size: 8.5pt; font-weight: 700; white-space: nowrap; }
+      .role { margin-top: 1px; color: #334155; font-weight: 700; }
+      ul { margin: 3px 0 0 16px; padding: 0; }
+      li { margin: 1.5px 0; }
+      .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 18px; }
+      .project { break-inside: avoid; }
+      .project h3 { font-size: 9.8pt; }
+      .project p { margin: 2px 0 0; color: #334155; }
+      .skills { display: grid; grid-template-columns: 116px 1fr; gap: 3px 8px; }
+      .skills strong { color: #0f172a; }
+      .education { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; }
+      .education div:nth-child(even) { text-align: right; color: #475569; }
+      footer { margin-top: 5px; border-top: 1px solid #cbd5e1; padding-top: 4px; color: #64748b; font-size: 7.7pt; display: flex; justify-content: space-between; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Huzaifa bin Ishaq</h1>
+        <div class="title">Full-Stack Developer · Cloud &amp; AI Automation</div>
+      </div>
+      <div class="contact">
+        Saskatoon, Saskatchewan · 639-318-2037<br />
+        <a href="mailto:huzaifa.ishaq.395@gmail.com">huzaifa.ishaq.395@gmail.com</a><br />
+        <a href="https://huzaifa.cc">huzaifa.cc</a> ·
+        <a href="https://github.com/elemten">github.com/elemten</a><br />
+        <a href="https://www.linkedin.com/in/huzaifa-ishaq-5547931bb/">linkedin.com/in/huzaifa-ishaq-5547931bb</a>
+      </div>
+    </header>
+
+    <p class="summary">
+      Full-stack developer who turns operational problems into secure, maintainable products. Recent work spans public-sector publishing, membership and finance operations, serverless AI document workflows, and geospatial systems using TypeScript, React, Next.js, Supabase/PostgreSQL, and Vercel.
+    </p>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <article class="entry">
+        <div class="entry-head"><h3>Table Tennis Saskatchewan · Saskatoon, SK</h3><span class="meta">Aug 2025 – Apr 2026</span></div>
+        <div class="role">IT Specialist &amp; Full-Stack Developer · Project Lead</div>
+        <ul>
+          <li>Built a React/Vite, TypeScript, and Supabase platform spanning memberships, bookings, events, finance, reporting, and role-aware administration.</li>
+          <li>Designed PostgreSQL schemas and Row Level Security; integrated Stripe webhooks, Google Calendar synchronization, Edge Functions, and server-generated PDF invoices.</li>
+          <li>Changed a ~968KB monolithic entry into a ~183KB main entry through route and vendor splitting; vendor chunks load and cache separately.</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="entry-head"><h3>Quest Disposal · Vegreville, AB</h3><span class="meta">May 2024 – Jul 2024</span></div>
+        <div class="role">IT Specialist &amp; Web Developer</div>
+        <ul>
+          <li>Mapped paper-heavy workshop operations into a shared work-order model with mechanic, administration, and management perspectives.</li>
+          <li>Prototyped role-aware operational views and connected workflow improvements with PowerApps, Power Automate, Microsoft 365, and public-site work.</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="entry-head"><h3>CNS Engineering &amp; Storak Digital · Lahore, PK</h3><span class="meta">Jan 2022 – Nov 2023</span></div>
+        <div class="role">Cloud Architect</div>
+        <ul>
+          <li>Designed AWS delivery and compute patterns using S3, CloudFront, Lambda, EC2, IAM, and VPC networking for client web workloads.</li>
+          <li>Built event-driven workflows and maintained secure, isolated hosting environments with an emphasis on reliability and lower operational overhead.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Selected Systems</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>LLRIB Website Modernization</h3>
+          <p>Next.js and Supabase public/staff platform with typed content models, migration tooling, document library, jobs, news, services, communities, and staff publishing boundaries.</p>
+        </article>
+        <article class="project">
+          <h3>AI Career Document Engine</h3>
+          <p>Serverless workflow for source-PDF extraction, job-aware generation, required-section validation, and downloadable resume or cover-letter PDFs.</p>
+        </article>
+        <article class="project">
+          <h3>PostGIS Road Matcher</h3>
+          <p>React, Vercel Functions, and PostGIS MVP that maps photo/device GPS to spatially indexed road geometry and explains raw versus snapped location.</p>
+        </article>
+        <article class="project">
+          <h3>Dynamic Ramadan Wallpaper</h3>
+          <p>Stateless Next.js/Sharp image service that encodes configuration in a durable URL and renders time- and location-aware phone wallpapers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <strong>Application</strong><span>TypeScript, JavaScript, React, Next.js, Vite, Tailwind CSS, REST APIs</span>
+        <strong>Cloud &amp; Data</strong><span>Supabase, PostgreSQL, PostGIS, AWS Lambda, S3, CloudFront, EC2, Docker, Vercel</span>
+        <strong>AI &amp; Automation</strong><span>OpenAI-compatible APIs, Agents SDK, Codex/Playwright workflows, n8n, Power Automate</span>
+        <strong>Security &amp; Systems</strong><span>RLS, RBAC, IAM, OAuth/JWT, networking, Windows/macOS administration, Tier 2 support</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education">
+        <div><strong>Postgraduate Certificate, Cloud Computing &amp; Blockchain</strong> · Saskatchewan Polytechnic</div><div>Jan 2026</div>
+        <div><strong>Bachelor of Computer Science</strong> · University of Central Punjab</div><div>Nov 2023</div>
+      </div>
+    </section>
+
+    <footer><span>Detailed case studies, architecture, screenshots, and evidence: huzaifa.cc</span><span>Updated July 2026</span></footer>
+  </body>
+</html>

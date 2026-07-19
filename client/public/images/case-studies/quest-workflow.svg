@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Quest Disposal workshop workflow</title>
+  <desc id="desc">A shared work order connects intake with mechanic, administration, management, automation, and reporting views.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18181b"/><stop offset="1" stop-color="#312e81"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="20" flood-opacity=".3"/></filter></defs>
+  <rect width="1600" height="900" rx="44" fill="url(#bg)"/>
+  <text x="110" y="120" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="700">Workshop operations, one shared record</text>
+  <text x="110" y="170" fill="#c4b5fd" font-family="Inter,Arial,sans-serif" font-size="24">Role-aware views without role-specific data silos</text>
+  <g font-family="Inter,Arial,sans-serif" filter="url(#s)">
+    <rect x="110" y="310" width="280" height="210" rx="24" fill="#27272a" stroke="#8b5cf6"/><text x="145" y="365" fill="#a78bfa" font-size="19" font-weight="700">01 · INTAKE</text><text x="145" y="418" fill="#fff" font-size="30" font-weight="700">Work request</text><text x="145" y="462" fill="#d4d4d8" font-size="19">Asset · issue · urgency</text>
+    <rect x="500" y="270" width="430" height="290" rx="28" fill="#4c1d95" stroke="#c4b5fd" stroke-width="2"/><text x="545" y="335" fill="#ddd6fe" font-size="19" font-weight="700">02 · SOURCE OF TRUTH</text><text x="545" y="405" fill="#fff" font-size="39" font-weight="700">Shared work order</text><text x="545" y="458" fill="#e9d5ff" font-size="20">Status · owner · parts · notes · history</text><text x="545" y="505" fill="#c4b5fd" font-size="18">Every role reads the same operational state.</text>
+    <rect x="1040" y="245" width="450" height="115" rx="22" fill="#27272a" stroke="#8b5cf6"/><text x="1075" y="294" fill="#a78bfa" font-size="18" font-weight="700">03A · MECHANIC</text><text x="1075" y="329" fill="#fff" font-size="24">Assigned work · parts · completion</text>
+    <rect x="1040" y="390" width="450" height="115" rx="22" fill="#27272a" stroke="#8b5cf6"/><text x="1075" y="439" fill="#a78bfa" font-size="18" font-weight="700">03B · ADMINISTRATION</text><text x="1075" y="474" fill="#fff" font-size="24">Intake · scheduling · records</text>
+    <rect x="1040" y="535" width="450" height="115" rx="22" fill="#27272a" stroke="#8b5cf6"/><text x="1075" y="584" fill="#a78bfa" font-size="18" font-weight="700">03C · MANAGEMENT</text><text x="1075" y="619" fill="#fff" font-size="24">Queue · exceptions · reporting</text>
+  </g>
+  <g stroke="#c4b5fd" stroke-width="5" fill="none"><path d="M390 415h110"/><path d="M930 415h110"/><path d="M980 415v-112h60"/><path d="M980 415v177h60"/></g>
+  <rect x="110" y="710" width="1380" height="80" rx="18" fill="#fff" opacity=".08"/><text x="145" y="761" fill="#ddd6fe" font-family="Inter,Arial,sans-serif" font-size="22">Automation follows the state model: notifications, handoffs, escalation, and audit history.</text>
+</svg>

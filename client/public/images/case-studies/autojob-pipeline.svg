@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AutoJobApply six-stage pipeline</title>
+  <desc id="desc">A diagram showing discovery, enrichment, scoring, tailoring, cover letter generation, and browser-assisted application.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#18181b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1600" height="900" rx="44" fill="url(#bg)"/>
+  <circle cx="1390" cy="90" r="240" fill="#db2777" opacity=".12"/>
+  <circle cx="120" cy="820" r="280" fill="#7c3aed" opacity=".12"/>
+  <text x="105" y="125" fill="#f9fafb" font-family="Inter,Arial,sans-serif" font-size="56" font-weight="700">AutoJobApply</text>
+  <text x="105" y="177" fill="#a1a1aa" font-family="Inter,Arial,sans-serif" font-size="25">OpenAI + Codex adaptation of the ApplyPilot pipeline</text>
+  <rect x="105" y="220" width="1390" height="4" rx="2" fill="url(#accent)"/>
+  <g font-family="Inter,Arial,sans-serif" filter="url(#shadow)">
+    <g transform="translate(105 310)">
+      <rect width="205" height="270" rx="22" fill="#27272a" stroke="#f472b6" stroke-opacity=".55"/>
+      <text x="28" y="52" fill="#f472b6" font-size="20" font-weight="700">01</text>
+      <text x="28" y="100" fill="#fff" font-size="30" font-weight="700">Discover</text>
+      <text x="28" y="146" fill="#d4d4d8" font-size="18">Boards</text>
+      <text x="28" y="179" fill="#d4d4d8" font-size="18">Workday portals</text>
+      <text x="28" y="212" fill="#d4d4d8" font-size="18">Direct sites</text>
+    </g>
+    <g transform="translate(342 310)">
+      <rect width="205" height="270" rx="22" fill="#27272a" stroke="#f472b6" stroke-opacity=".42"/>
+      <text x="28" y="52" fill="#f472b6" font-size="20" font-weight="700">02</text>
+      <text x="28" y="100" fill="#fff" font-size="30" font-weight="700">Enrich</text>
+      <text x="28" y="146" fill="#d4d4d8" font-size="18">JSON-LD</text>
+      <text x="28" y="179" fill="#d4d4d8" font-size="18">Selectors</text>
+      <text x="28" y="212" fill="#d4d4d8" font-size="18">AI fallback</text>
+    </g>
+    <g transform="translate(579 310)">
+      <rect width="205" height="270" rx="22" fill="#27272a" stroke="#c084fc" stroke-opacity=".45"/>
+      <text x="28" y="52" fill="#c084fc" font-size="20" font-weight="700">03</text>
+      <text x="28" y="100" fill="#fff" font-size="30" font-weight="700">Score</text>
+      <text x="28" y="146" fill="#d4d4d8" font-size="18">Profile fit</text>
+      <text x="28" y="179" fill="#d4d4d8" font-size="18">Evidence</text>
+      <text x="28" y="212" fill="#d4d4d8" font-size="18">Thresholds</text>
+    </g>
+    <g transform="translate(816 310)">
+      <rect width="205" height="270" rx="22" fill="#27272a" stroke="#c084fc" stroke-opacity=".45"/>
+      <text x="28" y="52" fill="#c084fc" font-size="20" font-weight="700">04</text>
+      <text x="28" y="100" fill="#fff" font-size="30" font-weight="700">Tailor</text>
+      <text x="28" y="146" fill="#d4d4d8" font-size="18">Grounded facts</text>
+      <text x="28" y="179" fill="#d4d4d8" font-size="18">Role keywords</text>
+      <text x="28" y="212" fill="#d4d4d8" font-size="18">Resume output</text>
+    </g>
+    <g transform="translate(1053 310)">
+      <rect width="205" height="270" rx="22" fill="#27272a" stroke="#a78bfa" stroke-opacity=".5"/>
+      <text x="28" y="52" fill="#a78bfa" font-size="20" font-weight="700">05</text>
+      <text x="28" y="100" fill="#fff" font-size="30" font-weight="700">Write</text>
+      <text x="28" y="146" fill="#d4d4d8" font-size="18">Cover letter</text>
+      <text x="28" y="179" fill="#d4d4d8" font-size="18">Company context</text>
+      <text x="28" y="212" fill="#d4d4d8" font-size="18">Reviewable files</text>
+    </g>
+    <g transform="translate(1290 310)">
+      <rect width="205" height="270" rx="22" fill="#27272a" stroke="#a78bfa" stroke-opacity=".62"/>
+      <text x="28" y="52" fill="#a78bfa" font-size="20" font-weight="700">06</text>
+      <text x="28" y="100" fill="#fff" font-size="30" font-weight="700">Apply</text>
+      <text x="28" y="146" fill="#d4d4d8" font-size="18">Codex</text>
+      <text x="28" y="179" fill="#d4d4d8" font-size="18">Playwright</text>
+      <text x="28" y="212" fill="#d4d4d8" font-size="18">Dry run</text>
+    </g>
+  </g>
+  <g fill="none" stroke="url(#accent)" stroke-width="5" opacity=".9">
+    <path d="M310 445h32"/><path d="M547 445h32"/><path d="M784 445h32"/><path d="M1021 445h32"/><path d="M1258 445h32"/>
+  </g>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="105" y="665" width="860" height="105" rx="18" fill="#27272a" stroke="#52525b"/>
+    <text x="140" y="709" fill="#fafafa" font-size="24" font-weight="700">Inspectable by design</text>
+    <text x="140" y="745" fill="#a1a1aa" font-size="19">Independent stages · persisted state · doctor checks · dry-run browser mode</text>
+    <rect x="995" y="665" width="500" height="105" rx="18" fill="#3f1732" stroke="#db2777" stroke-opacity=".7"/>
+    <text x="1030" y="709" fill="#fce7f3" font-size="24" font-weight="700">Provenance matters</text>
+    <text x="1030" y="745" fill="#f9a8d4" font-size="19">ApplyPilot · Pickle-Pixel · AGPL-3.0</text>
+  </g>
+</svg>
