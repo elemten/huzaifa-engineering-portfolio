@@ -11,11 +11,28 @@ import {
 import { useEffect } from "react";
 import type { ReactNode } from "react";
 import { useLocation } from "wouter";
+import {
+  SiAmazonwebservices,
+  SiDocker,
+  SiGoogle,
+  SiJavascript,
+  SiN8N,
+  SiNextdotjs,
+  SiOpenai,
+  SiPostgresql,
+  SiReact,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
+} from "react-icons/si";
+import { FaCogs, FaMicrosoft, FaNetworkWired, FaServer, FaShieldAlt } from "react-icons/fa";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import SystemsIBuiltSection from "@/components/SystemsIBuiltSection";
 import ContactSection from "@/components/ContactSection";
 import SiteNav from "@/components/SiteNav";
 import { TypewriterText } from "@/components/TypewriterText";
+import CoolStuffSection from "@/components/CoolStuffSection";
 
 const PENDING_NAV_TARGET_KEY = "site-nav-target";
 
@@ -68,6 +85,63 @@ const skills = {
     "IP Camera/VMS",
     "Windows/macOS Admin",
   ],
+};
+
+const techIcons: Record<string, ReactNode> = {
+  "TypeScript": <SiTypescript className="h-5 w-5" />,
+  "JavaScript": (
+    <span className="inline-flex h-5 w-5 items-center justify-center rounded-[2px] bg-[#111]">
+      <SiJavascript className="h-5 w-5" />
+    </span>
+  ),
+  "React": <SiReact className="h-5 w-5" />,
+  "Next.js": <SiNextdotjs className="h-5 w-5" />,
+  "Tailwind CSS": <SiTailwindcss className="h-5 w-5" />,
+  "Supabase": <SiSupabase className="h-5 w-5" />,
+  "PostgreSQL": <SiPostgresql className="h-5 w-5" />,
+  "AWS Lambda": <SiAmazonwebservices className="h-5 w-5" />,
+  "S3": <SiAmazonwebservices className="h-5 w-5" />,
+  "EC2": <SiAmazonwebservices className="h-5 w-5" />,
+  "Docker": <SiDocker className="h-5 w-5" />,
+  "Vercel CI/CD": <SiVercel className="h-5 w-5" />,
+  "OpenAI Agent SDK": <SiOpenai className="h-5 w-5" />,
+  "Google ADK": <SiGoogle className="h-5 w-5" />,
+  "Google A2A Kit": <SiGoogle className="h-5 w-5" />,
+  "Multi-Agent Architectures": <FaServer className="h-5 w-5" />,
+  "n8n": <SiN8N className="h-5 w-5" />,
+  "Power Automate": <FaMicrosoft className="h-5 w-5" />,
+  "REST APIs": <FaServer className="h-5 w-5" />,
+  "IAM Roles & Policies": <FaShieldAlt className="h-5 w-5" />,
+  "RBAC": <FaShieldAlt className="h-5 w-5" />,
+  "OAuth/JWT": <FaShieldAlt className="h-5 w-5" />,
+  "Supabase RLS": <SiSupabase className="h-5 w-5" />,
+  "M365 Administration": <FaMicrosoft className="h-5 w-5" />,
+  "Networking": <FaNetworkWired className="h-5 w-5" />,
+  "Tier 2 Troubleshooting": <FaCogs className="h-5 w-5" />,
+  "IP Camera/VMS": <FaNetworkWired className="h-5 w-5" />,
+  "Windows/macOS Admin": <FaCogs className="h-5 w-5" />,
+};
+
+const techBrandColors: Record<string, string> = {
+  TypeScript: "#3178C6",
+  JavaScript: "#F7DF1E",
+  React: "#087EA4",
+  "Next.js": "#111111",
+  "Tailwind CSS": "#06B6D4",
+  Supabase: "#2E9E6F",
+  "Supabase RLS": "#2E9E6F",
+  PostgreSQL: "#336791",
+  Docker: "#2496ED",
+  "AWS Lambda": "#E77700",
+  S3: "#E77700",
+  EC2: "#E77700",
+  "OpenAI Agent SDK": "#111111",
+  "Google ADK": "#4285F4",
+  "Google A2A Kit": "#4285F4",
+  n8n: "#D93662",
+  "Power Automate": "#0067B8",
+  "M365 Administration": "#D83B01",
+  "Vercel CI/CD": "#111111",
 };
 
 const skillCategories: Array<{
@@ -257,10 +331,7 @@ function Hero() {
       <div className="container">
         <div className="grid gap-14 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
-            <div className="mb-7 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-              <span className="rounded-full border border-border bg-white px-3 py-1.5">Full-stack systems engineer</span>
-              <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-emerald-800">Open to roles · Canada / remote</span>
-            </div>
+            <p className="mb-7 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Full-stack developer &amp; cloud architect</p>
             <h1 className="text-5xl font-semibold leading-[0.98] tracking-[-0.06em] md:text-7xl lg:text-[5.35rem]">
               Huzaifa bin Ishaq
             </h1>
@@ -360,7 +431,7 @@ function Skills() {
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <p className="section-label">Technical range</p>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">Grouped by the problems I can own, not a logo cloud.</p>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">Grouped by the systems I can own, with the tools kept recognizable.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:col-span-9">
             {skillCategories.map(category => (
@@ -368,12 +439,23 @@ function Skills() {
                 <h3 className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.13em] text-foreground">
                   <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary text-foreground">{category.icon}</span>{category.title}
                 </h3>
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {category.items.map(skill => (
-                    <li key={skill} className="rounded-full border border-border bg-secondary/40 px-3 py-1.5 text-xs font-medium text-muted-foreground">
-                      {skill}
-                    </li>
-                  ))}
+                <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                  {category.items.map(skill => {
+                    const icon = techIcons[skill];
+                    const color = techBrandColors[skill];
+                    return (
+                      <li key={skill} className="flex min-h-11 items-center gap-3 border-t border-border/80 pt-2.5 text-xs font-medium text-foreground/75">
+                        <span
+                          className={`inline-flex h-7 w-7 shrink-0 items-center justify-center ${color ? "" : "text-muted-foreground"}`}
+                          style={color ? { color } : undefined}
+                          aria-hidden="true"
+                        >
+                          {icon}
+                        </span>
+                        <span>{skill}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </article>
             ))}
@@ -569,6 +651,7 @@ export default function Home() {
       <main>
         <Hero />
         <SystemsIBuiltSection />
+        <CoolStuffSection />
         <About />
         <Experience />
         <Skills />

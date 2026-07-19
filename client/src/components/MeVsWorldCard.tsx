@@ -700,7 +700,7 @@ export function MeVsWorldCard() {
   const isDead=phase==="dead";
 
   return (
-    <div className="flex flex-col overflow-hidden rounded-2xl border border-[#1c2e1c] bg-[#07100a] shadow-[0_0_48px_rgba(0,0,0,0.7)]">
+    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#1c2e1c] bg-[#07100a] shadow-[0_0_48px_rgba(0,0,0,0.7)]">
 
       {/* Header */}
       <div className="flex items-center justify-between border-b border-[#1c2e1c] px-4 py-2.5">
@@ -734,7 +734,7 @@ export function MeVsWorldCard() {
       {/* 3D Viewport */}
       <div
         ref={mountRef}
-        className="relative select-none overflow-hidden"
+        className="relative flex-1 select-none overflow-hidden"
         style={{aspectRatio:"4/3"}}
         onTouchStart={onTouchStart} onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd} onTouchCancel={onTouchEnd}
@@ -767,7 +767,7 @@ export function MeVsWorldCard() {
                 </p>
                 <div className="flex flex-col gap-2">
                   <button onClick={startGame}
-                    className="w-fit rounded-full bg-[#4ade80] px-6 py-2.5 text-xs font-black tracking-[0.2em] text-[#07100a] shadow-[0_0_24px_rgba(74,222,128,0.5)] transition hover:bg-[#86efac] hover:shadow-[0_0_32px_rgba(74,222,128,0.7)] active:scale-95">
+                    className="w-fit whitespace-nowrap rounded-full bg-[#4ade80] px-6 py-2.5 text-xs font-black tracking-[0.2em] text-[#07100a] shadow-[0_0_24px_rgba(74,222,128,0.5)] transition hover:bg-[#86efac] hover:shadow-[0_0_32px_rgba(74,222,128,0.7)] active:scale-95">
                     ▶ PLAY NOW
                   </button>
                   <p className="text-[8px] tracking-[0.25em] text-[#4ade80]/25">WASD · SPACE TO SLASH</p>
@@ -811,7 +811,7 @@ export function MeVsWorldCard() {
       </div>
 
       {/* Footer */}
-      <div className="flex items-center justify-between border-t border-[#1c2e1c] px-4 py-2">
+      <div className="mt-auto flex items-center justify-between border-t border-[#1c2e1c] px-4 py-2">
         <p className="text-[9px] tracking-[0.18em] text-[#4ade80]/30">
           {isPlaying?"WASD · SPACE or tap Slash":isDead?"Press Try Again":"Click Play to start"}
         </p>

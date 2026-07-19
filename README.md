@@ -13,7 +13,7 @@ Live site: [huzaifa.cc](https://huzaifa.cc)
 | --- | --- | --- |
 | LLRIB modernization | Content modeling, migration, public-service delivery | Client source remains private; public-page captures and simplified architecture only |
 | TTSASK platform | Full-stack ownership, Postgres/RLS, integration boundaries | Organization source remains private; public UI and self-authored architecture only |
-| Career document engine | Grounded AI pipeline, schema gates, PDF delivery | Sanitized product evidence |
+| ApplyPilot control panel | Human-supervised automation, stage visibility, explicit submission boundary | Deployed demo captures; upstream ApplyPilot/Pickle-Pixel attribution retained |
 | GIS road matcher | PostGIS KNN, coordinate provenance, map verification | Sanitized product evidence |
 
 Each case study labels the problem, contribution, constraints, architecture, evidence, security decisions, and limitations. Private work is not presented as public source.
@@ -24,6 +24,8 @@ Each case study labels the problem, contribution, constraints, architecture, evi
 - Progressive disclosure: outcome-first cards lead to technical case studies.
 - A typing/deleting hero animation with a stable screen-reader alternative and reduced-motion support.
 - Real product captures where safe, deterministic architecture traces, and interactive walkthroughs.
+- Branded technology icons and color are limited to the technical-range section instead of becoming generic badges across the site.
+- A small “Cool Stuff” playground keeps personality visible without interrupting the hiring narrative.
 - Responsive layouts designed for recruiter scanning on mobile and engineering review on desktop.
 
 ## Stack
@@ -61,7 +63,7 @@ The browser acceptance pass covers the homepage and four flagship routes at desk
 
 ## Repository policy
 
-This project can be shared as a clean, sanitized source snapshot after a final history-independent secret scan and asset review. It must not be made public by changing the visibility of the private development repository.
+This repository is the reviewed clean-history public snapshot. It intentionally excludes the private development history, internal planning files, client repositories, runtime data, and deployment credentials.
 
 ## License
 

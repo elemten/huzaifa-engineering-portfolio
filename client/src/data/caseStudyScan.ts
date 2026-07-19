@@ -20,6 +20,11 @@ export type CaseStudyScan = {
   owned: string[];
   before: string[];
   after: string[];
+  impact?: {
+    easier: string;
+    automated: string;
+    proof: string;
+  };
   system: SystemStep[];
   proof: ProofImage[];
 };
@@ -33,6 +38,11 @@ export const caseStudyScanBySlug: Record<string, CaseStudyScan> = {
     owned: ["Content model", "Next.js delivery", "Migration tooling", "Supabase integration"],
     before: ["Legacy page templates", "Scattered media files", "Manual content updates"],
     after: ["Typed content domains", "Searchable document library", "Role-aware publishing path"],
+    impact: {
+      easier: "Public information is organized into reusable domains instead of one-off pages.",
+      automated: "Repeatable import tooling replaced manual copy-and-paste for the legacy content set.",
+      proof: "288 documents migrated into a searchable library; six communities and seven content domains modeled.",
+    },
     system: [
       { label: "Public request", detail: "Server-rendered service, community, news, job, or document route.", ownership: "built" },
       { label: "Content service", detail: "Typed queries normalize public records before rendering.", ownership: "built" },
@@ -54,6 +64,11 @@ export const caseStudyScanBySlug: Record<string, CaseStudyScan> = {
     owned: ["Postgres schema", "Row Level Security", "Public + admin UI", "Service orchestration"],
     before: ["Spreadsheet operations", "Disconnected public pages", "Manual payment/calendar handoffs"],
     after: ["Shared operational data", "Database-level authorization", "Integrated service workflows"],
+    impact: {
+      easier: "Administrators can work from shared membership, booking, finance, event, and schedule data.",
+      automated: "Stripe events, invoice generation, and Google Calendar handoffs run through server-side workflows.",
+      proof: "Five operational areas consolidated; the main entry reduced from 967.8KB to about 183KB plus vendor chunks.",
+    },
     system: [
       { label: "React surfaces", detail: "Public journeys and role-aware administrative modules.", ownership: "built" },
       { label: "Supabase Auth", detail: "Session and identity boundary for staff workflows.", ownership: "platform" },
@@ -74,6 +89,11 @@ export const caseStudyScanBySlug: Record<string, CaseStudyScan> = {
     owned: ["Pipeline design", "Grounding rules", "Schema validation", "PDF delivery"],
     before: ["One-shot generation", "Unbounded rewriting", "Unstructured output"],
     after: ["Source-grounded context", "Stage-level validation", "Downloadable PDF artifact"],
+    impact: {
+      easier: "One job description can produce a tailored résumé or cover letter from one factual source.",
+      automated: "Extraction, relevance mapping, validation, and PDF rendering run as one repeatable pipeline.",
+      proof: "Six explicit stages, two document modes, and no provider credential shipped to the browser.",
+    },
     system: [
       { label: "Source résumé", detail: "One tracked source résumé provides the factual boundary for both output modes.", ownership: "built" },
       { label: "Job analysis", detail: "Requirements and keywords are extracted into a structured brief.", ownership: "built" },
@@ -98,6 +118,11 @@ export const caseStudyScanBySlug: Record<string, CaseStudyScan> = {
     owned: ["Capture flow", "Spatial query", "PostGIS model", "Map verification UI"],
     before: ["Photo with uncertain context", "Manual map lookup", "No reusable spatial record"],
     after: ["Normalized coordinates", "Nearest-road candidates", "Auditable map comparison"],
+    impact: {
+      easier: "A reviewer receives normalized road candidates instead of manually interpreting photo coordinates.",
+      automated: "EXIF extraction, coordinate validation, radius filtering, and distance ordering run on demand.",
+      proof: "Raw point, snapped point, distance, and road geometry remain visible in one review surface.",
+    },
     system: [
       { label: "Photo / GPS", detail: "EXIF is preferred; device location provides a controlled fallback.", ownership: "built" },
       { label: "Coordinate input", detail: "Inputs are type-checked; geographic and result-count bounds remain hardening work.", ownership: "built" },
@@ -140,21 +165,46 @@ export const caseStudyScanBySlug: Record<string, CaseStudyScan> = {
     ],
   },
   autojobapply: {
-    brief: "Study and adapt an open-source job-application pipeline as inspectable stages.",
-    problem: "Job automation becomes brittle when discovery, scoring, document work, and browser actions are one opaque loop.",
-    intervention: "I worked from ApplyPilot's AGPL codebase and kept enrichment, evaluation, document, and browser stages separable.",
-    result: "A six-stage adaptation where failures and retries can be reasoned about by boundary, not guessed from one long run.",
-    owned: ["Adaptation work", "Stage boundaries", "Failure model", "Deployment study"],
-    before: ["Opaque long-running task", "Shared failure state", "Difficult retries"],
-    after: ["Inspectable stages", "Boundary-level retry", "Explicit upstream provenance"],
+    brief: "Prepare, inspect, and approve application work without giving the browser authority to submit.",
+    problem: "Long-running job automation hides where a role failed, what was generated, and whether the candidate still controls the final action.",
+    intervention: "I adapted ApplyPilot's AGPL pipeline and deployed a responsive control surface with separate stages, visible status, and an explicit human submission boundary.",
+    result: "A four-stage control panel makes preparation observable; the current Vercel deployment is honestly labeled demo mode until its API is configured.",
+    owned: ["Control-panel UI", "Stage visibility", "Human handoff", "Deployment study"],
+    before: ["Opaque command-line run", "Shared failure state", "Unclear submission authority"],
+    after: ["Visible queue state", "Stage-level control", "Candidate-controlled submission"],
+    impact: {
+      easier: "A candidate can see discovery, enrichment, scoring, and document preparation in one supervised queue.",
+      automated: "The interface coordinates four preparation stages while deliberately leaving final submission manual.",
+      proof: "Four visible stages, three verified responsive states, zero automatic submissions, and explicit upstream AGPL attribution.",
+    },
     system: [
-      { label: "Discovery", detail: "Collect candidate roles and normalize source metadata.", ownership: "built" },
-      { label: "Enrichment", detail: "Add company and role context before evaluation.", ownership: "built" },
-      { label: "Evaluation", detail: "Score fit against the candidate profile and constraints.", ownership: "built" },
-      { label: "Documents", detail: "Prepare application-specific artifacts for approved roles.", ownership: "built" },
-      { label: "Browser worker", detail: "Execute supported application flows with observable state.", ownership: "platform" },
+      { label: "Discover", detail: "Collect Canada-remote roles and apply strict eligibility checks.", ownership: "built" },
+      { label: "Enrich", detail: "Fetch descriptions and direct application links.", ownership: "built" },
+      { label: "Score", detail: "Rank roles against the configured candidate profile.", ownership: "built" },
+      { label: "Tailor & cover", detail: "Prepare role-specific résumé and cover-letter artifacts.", ownership: "built" },
+      { label: "Human handoff", detail: "The candidate opens the link and submits personally.", ownership: "external" },
     ],
-    proof: [],
+    proof: [
+      {
+        src: "/images/case-studies/applypilot-control-panel.png",
+        alt: "ApplyPilot desktop control panel showing the idle four-stage queue",
+        caption: "Idle control surface with stage counts, manual starts, and the human submission boundary.",
+        provenance: "Vercel deployment · demo mode · 19 Jul 2026",
+      },
+      {
+        src: "/images/case-studies/applypilot-running.png",
+        alt: "ApplyPilot control panel showing discovery in a running state",
+        caption: "A stage start produces visible running state and polling feedback instead of a hidden long-running task.",
+        provenance: "Vercel deployment · mock run · 19 Jul 2026",
+      },
+      {
+        src: "/images/case-studies/applypilot-mobile.png",
+        alt: "ApplyPilot control panel rendered on a mobile viewport",
+        caption: "Responsive queue controls preserve status, attribution, and the manual-submission boundary.",
+        provenance: "430 px viewport verification · 19 Jul 2026",
+        orientation: "portrait",
+      },
+    ],
   },
   "quest-disposal": {
     brief: "Prototype a role-aware workshop workflow to replace paper work orders.",
