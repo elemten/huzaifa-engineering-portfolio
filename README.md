@@ -49,6 +49,7 @@ Then open `http://localhost:3000`.
 ```bash
 pnpm check
 pnpm build
+pnpm audit
 ```
 
 The browser acceptance pass covers the homepage and four flagship routes at desktop and 390px mobile widths, checking route status, error overlays, console errors, broken images, and horizontal overflow.
